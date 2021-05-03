@@ -19,7 +19,7 @@ router.get('/new', isLoggedIn, sites.renderNewForm)
 router.route('/:id')
     .get(catchAsync(sites.showsite))
     .put(isLoggedIn, isAuthor, upload.array('image'), validatesite, catchAsync(sites.updatesite))
-    .delete(isLoggedIn, isAuthor, catchAsync(sites.deletesite));
+    .delete(isLoggedIn, isAuthor, catchAsync(sites.deleteSite));
 
 router.get('/:id/edit', isLoggedIn, isAuthor, catchAsync(sites.renderEditForm))
 

@@ -70,7 +70,7 @@ module.exports.updatesite = async (req, res) => {
     res.redirect(`/sites/${site._id}`)
 }
 
-module.exports.deletesite = async (req, res) => {
+module.exports.deleteSite = async (req, res) => {
     const { id } = req.params;
     await Site.findByIdAndDelete(id);
     req.flash('success', 'Successfully deleted site')

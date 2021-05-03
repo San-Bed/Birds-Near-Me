@@ -1,6 +1,6 @@
 const { siteSchema, reviewSchema } = require('./schemas.js');
 const ExpressError = require('./utils/ExpressError');
-const site = require('./models/site');
+const Site = require('./models/site');
 const Review = require('./models/review');
 
 module.exports.isLoggedIn = (req, res, next) => {
@@ -13,8 +13,8 @@ module.exports.isLoggedIn = (req, res, next) => {
 }
 
 module.exports.validatesite = (req, res, next) => {
-    const { error } = siteSchema.validate(req.body);
     console.log(req.body);
+    const { error } = siteSchema.validate(req.body);
     if (error) {
         const msg = error.details.map(el => el.message).join(',')
         throw new ExpressError(msg, 400)
@@ -25,7 +25,7 @@ module.exports.validatesite = (req, res, next) => {
 
 module.exports.isAuthor = async (req, res, next) => {
     const { id } = req.params;
-    const site = await site.findById(id);
+    const site = await Site.findById(id);
     if (!site.author.equals(req.user._id)) {
         req.flash('error', 'You do not have permission to do that!');
         return res.redirect(`/sites/${id}`);
