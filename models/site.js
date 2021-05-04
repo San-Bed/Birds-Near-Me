@@ -27,7 +27,6 @@ const siteSchema = new Schema({
             required: true
         }
     },
-    price: Number,
     description: String,
     location: String,
     author: {

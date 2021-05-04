@@ -14,7 +14,7 @@ module.exports.renderNewForm = (req, res) => {
     res.render('sites/new');
 }
 
-module.exports.createsite = async (req, res, next) => {
+module.exports.createSite = async (req, res, next) => {
     const geoData = await geocoder.forwardGeocode({
         query: req.body.site.location,
         limit: 1
@@ -29,7 +29,7 @@ module.exports.createsite = async (req, res, next) => {
     res.redirect(`/sites/${site._id}`)
 }
 
-module.exports.showsite = async (req, res,) => {
+module.exports.showSite = async (req, res,) => {
     const site = await Site.findById(req.params.id).populate({
         path: 'reviews',
         populate: {
@@ -53,10 +53,10 @@ module.exports.renderEditForm = async (req, res) => {
     res.render('sites/edit', { site });
 }
 
-module.exports.updatesite = async (req, res) => {
+module.exports.updateSite = async (req, res) => {
     const { id } = req.params;
     console.log(req.body);
-    const site = await site.findByIdAndUpdate(id, { ...req.body.site });
+    const site = await Site.findByIdAndUpdate(id, { ...req.body.site });
     const imgs = req.files.map(f => ({ url: f.path, filename: f.filename }));
     site.images.push(...imgs);
     await site.save();

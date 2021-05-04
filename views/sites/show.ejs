@@ -31,19 +31,15 @@
             <ul class="list-group list-group-flush">
                 <li class="list-group-item text-muted"><%= site.location%></li>
                 <li class="list-group-item">Submitted by <%= site.author.username%></li>
-                <li class="list-group-item">$<%= site.price%>/night</li>
             </ul>
             <%  if( currentUser && site.author.equals(currentUser._id))  {%>
             <div class="card-body">
-                <a class="card-link btn btn-info" href="/sites/<%=site._id%>/edit">Edit</a>
+                <a class="card-link btn rounded-pill btn-info mr-2" href="/sites/<%=site._id%>/edit">Edit</a>
                 <form class="d-inline" action="/sites/<%=site._id%>?_method=DELETE" method="POST">
-                    <button class="btn btn-danger">Delete</button>
+                    <button class="btn rounded-pill btn-danger">Delete</button>
                 </form>
             </div>
             <% } %>
-            <div class="card-footer text-muted">
-                2 days ago
-            </div>
         </div>
 
     </div>
@@ -51,12 +47,8 @@
         <div id='map'></div>
 
         <% if(currentUser){ %>
-        <h2>Leave a Review</h2>
+        <h2 class='my-3'>Leave a review</h2>
         <form action="/sites/<%=site._id%>/reviews" method="POST" class="mb-3 validated-form" novalidate>
-            <!-- <div class="mb-3">
-                <label class="form-label" for="rating">Rating</label>
-                <input class="form-range" type="range" min="1" max="5" name="review[rating]" id="rating">
-            </div> -->
             <fieldset class="starability-basic">
                 <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="1" checked
                     aria-label="No rating." />
@@ -72,13 +64,10 @@
                 <label for="first-rate5" title="Amazing">5 stars</label>
             </fieldset>
             <div class="mb-3">
-                <label class="form-label" for="body">Review Text</label>
+                <label class="form-label" for="body">Text</label>
                 <textarea class="form-control" name="review[body]" id="body" cols="30" rows="3" required></textarea>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
             </div>
-            <button class="btn btn-success">Submit</button>
+            <button class="btn rounded-pill btn-success">Submit</button>
         </form>
         <% } %>
         <% for(let review of site.reviews) { %>
@@ -92,7 +81,7 @@
                 <p class="card-text">Review: <%= review.body %></p>
                 <%  if( currentUser && review.author.equals(currentUser._id))  {%>
                 <form action="/sites/<%=site._id%>/reviews/<%=review._id%>?_method=DELETE" method="POST">
-                    <button class="btn btn-sm btn-danger">Delete</button>
+                    <button class="btn rounded-pill btn-danger">Delete</button>
                 </form>
                 <% } %>
             </div>

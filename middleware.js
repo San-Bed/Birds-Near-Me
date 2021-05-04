@@ -12,7 +12,7 @@ module.exports.isLoggedIn = (req, res, next) => {
     next();
 }
 
-module.exports.validatesite = (req, res, next) => {
+module.exports.validateSite = (req, res, next) => {
     console.log(req.body);
     const { error } = siteSchema.validate(req.body);
     if (error) {
