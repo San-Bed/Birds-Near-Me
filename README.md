@@ -1,0 +1,49 @@
+# Birds-Near-Me
+
+This project uses the same template than this [one](https://github.com/San-Bed/Shopify-Developer-Intern-Challenge), but adds new features. Users can share bitwatching hotspots and add reviews for each one. Hotspots are displayed on an interactive map. The deployed version is available [here](https://dashboard.heroku.com/apps/birds-near-me). Unfortunately, it's not compatible on Safari, so please use Google Chrome or Firefox.
+
+## Installation
+
+Start by cloning the repository and installing all required packages.
+
+```
+git clone https://github.com/San-Bed/Birds-Near-Me.git 
+npm install
+```
+
+Then, you must create a [Cloudinary](https://cloudinary.com) account to store images. From your dashboard, copy your Cloud name, API Key and API Secret and add them to a .env in the root directory of the project. You should follow this format:
+
+```
+CLOUDINARY_CLOUD_NAME=Cloud name
+CLOUDINARY_KEY=API Key
+CLOUDINARY_SECRET=API Secret
+```
+
+Also, you need to sign up with [Mapbox](https://www.mapbox.com) for the interactive map. Copy the API access token and add it to the .env file like this:
+
+```
+MAPBOX_TOKEN=API access token
+```
+
+In the deployed version, I use [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) to store the products. However, for testing purposes, a local database is automatically created, so no further steps are required. Run the code with:
+
+```
+nodemon app.js
+```
+
+You should see on the CLI the following lines:
+
+```
+[nodemon] 2.0.7
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node app.js`
+Serving on port 3000
+Database connected
+```
+The website will be available at [http://localhost:3000/](http://localhost:3000/). 
+
+## Support
+
+If you run through any trouble with the installation, please contact me at [sandrine.bedard@icloud.com](mailto:sandrine.bedard@icloud.com]).
