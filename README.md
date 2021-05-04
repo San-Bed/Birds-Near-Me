@@ -4,6 +4,14 @@ This project uses the same template than this [one](https://github.com/San-Bed/S
 
 ## Installation
 
+Make sure you have installed all of the following prerequisites on your development machine:
+
+* [Git](https://git-scm.com/downloads) - OSX and Linux machines typically have this already installed
+* [Node.js](https://nodejs.org/en/) and the npm package manager (usually installed with Node.js)
+* [Nodemon](https://www.npmjs.com/package/nodemon) - Restarts the server when files change
+* [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/) - Make sure it's running on the default port (27017)
+
+
 Start by cloning the repository and installing all required packages.
 
 ```
