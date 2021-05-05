@@ -55,3 +55,7 @@ The website will be available at [http://localhost:3000/](http://localhost:3000/
 ## Support
 
 If you run through any trouble with the installation, please contact me at [sandrine.bedard@icloud.com](mailto:sandrine.bedard@icloud.com]).
+
+
+## Acknowledgment
+I would like to thank Colt Steele for his course [The Web Developer Bootcamp 2021](https://www.udemy.com/course/the-web-developer-bootcamp/). I completed the 65-hour course in April 2021 and it helped me a lot for this project. 
