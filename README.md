@@ -27,7 +27,7 @@ CLOUDINARY_KEY=API Key
 CLOUDINARY_SECRET=API Secret
 ```
 
-Also, you need to sign up with [Mapbox](https://www.mapbox.com) for the interactive map. Copy the API access token and add it to the .env file like this:
+Additionally, you need to open a [Mapbox](https://www.mapbox.com) account to display the interactive map. Copy the API access token and add it to the .env file:
 
 ```
 MAPBOX_TOKEN=API access token
