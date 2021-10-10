@@ -1,6 +1,6 @@
 # Birds-Near-Me
 
-This project uses the same template than this [one](https://github.com/San-Bed/Shopify-Developer-Intern-Challenge), but adds new features. Users can share bitwatching hotspots and add reviews for each one. Hotspots are displayed on an interactive map. The deployed version is available [here](https://dashboard.heroku.com/apps/birds-near-me). Unfortunately, it's not compatible on Safari, so please use Google Chrome or Firefox.
+This is a website where users can share bitwatching hotspots and add reviews for each one. Hotspots are displayed on an interactive map. The deployed version is available [here](https://dashboard.heroku.com/apps/birds-near-me). Unfortunately, it's not compatible on Safari, so please use Google Chrome or Firefox.
 
 ## Installation
 
