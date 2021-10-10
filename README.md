@@ -15,7 +15,7 @@ Make sure you have installed all of the following prerequisites on your developm
 Start by cloning the repository and installing all required packages.
 
 ```
-git clone https://github.com/San-Bed/Birds-Near-Me.git 
+git clone https://github.com/sandrine-bedard/Birds-Near-Me
 npm install
 ```
 
