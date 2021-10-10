@@ -58,4 +58,4 @@ If you run through any trouble with the installation, please contact me at [sand
 
 
 ## Acknowledgment
-I would like to thank Colt Steele for his course [The Web Developer Bootcamp 2021](https://www.udemy.com/course/the-web-developer-bootcamp/). I completed the 65-hour course in April 2021 and it helped me a lot for this project. I would also like to thank my friends, Maxime Pelletier et Justin Michaud, for thoroughly testing my application.
+I would like to thank Colt Steele for his course [The Web Developer Bootcamp 2021](https://www.udemy.com/course/the-web-developer-bootcamp/). I completed the 65-hour course in April 2021 and it helped me a lot for this project. I would also like to thank my friends, Maxime Pelletier et Justin Michaud, for testing my application.
